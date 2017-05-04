@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Without WebWorker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-card *ngFor="let row of rows">
+      <img [src]="row.img" />
+      <div class="card-title"> {{row.title}}</div>
+      <ion-card-content>
+        The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
